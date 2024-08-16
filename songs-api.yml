@@ -1,0 +1,71 @@
+openapi: 3.0.0
+info:
+  title: Your App API
+  version: 1.0.0
+  description: API documentation for Your App
+
+paths:
+  /:
+    get:
+      summary: Get the index page
+      responses:
+        "200":
+          description: Successful response
+
+  /downloader:
+    get:
+      summary: Get the downloader page
+      responses:
+        "200":
+          description: Successful response
+
+  /song:
+    get:
+      summary: Get the song page
+      responses:
+        "200":
+          description: Successful response
+
+  /pdf:
+    get:
+      summary: Get the PDF page
+      responses:
+        "200":
+          description: Successful response
+
+  /submit:
+    post:
+      summary: Submit data
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                mode:
+                  type: string
+                choose-file:
+                  type: string
+                  format: binary
+                source-folder:
+                  type: string
+                target-folder:
+                  type: string
+                text:
+                  type: string
+                file-type:
+                  type: string
+                crop-start:
+                  type: string
+                crop-end:
+                  type: string
+                concat-name:
+                  type: string
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              example:
+                message: Submitted successfully

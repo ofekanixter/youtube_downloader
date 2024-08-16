@@ -1,0 +1,1 @@
+cd C:\Users\SmadarENB3\OneDrive\Desktop\ofek\programing\python && python .\main_script.py DRIVE
